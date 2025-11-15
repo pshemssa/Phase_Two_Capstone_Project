@@ -17,26 +17,26 @@ const Header = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const linkBaseStyles =
-    "text-sm font-medium transition-colors text-[var(--color-text-muted)] hover:text-[var(--color-text-primary)]";
+    "text-sm font-medium transition-colors hover:text-yellow-500";
 
   const linkActiveStyles =
-    "text-[var(--color-text-primary)] border-b-2 border-[var(--color-accent)] pb-1";
+    "text-yellow-500 border-b-2 pb-1";
 
   const isActive = (path: string) => pathname === path;
 
   return (
-    <header className="sticky top-0 z-40 bg-[var(--color-background)]/80 backdrop-blur border-b border-black/5">
+    <header className="sticky top-0 z-40 bg-yellow-800 hover:bg-yellow-700 ">
       <div className="app-container flex items-center justify-between py-4 sm:py-5">
         <Link href="/" className="flex items-center gap-2">
-          <div className="h-10 w-10 rounded-full bg-[var(--color-accent)]/20 flex items-center justify-center text-[var(--color-accent)] font-semibold">
+          <div className="h-10 w-10 rounded-full  flex items-center justify-center font-semibold">
             LY
           </div>
-          <div className="flex flex-col">
+          <div className="flex flex-col hover:text-yellow-500 transition">
             <span className="font-serif text-xl sm:text-2xl tracking-tight">
               Lumen Yard
             </span>
-            <span className="text-xs text-[var(--color-text-muted)] uppercase tracking-[0.25em]">
-              Stories that linger
+            <span className="text-xs ">
+              STORIES THAT LINGER
             </span>
           </div>
         </Link>
@@ -61,12 +61,12 @@ const Header = () => {
 
         {/* Desktop Buttons */}
         <div className="hidden md:flex items-center gap-3">
-          <button className="px-4 py-2 rounded-full border border-black/10 text-sm font-medium text-[var(--color-text-muted)] hover:text-[var(--color-text-primary)] transition">
+          <button className="px-4 py-2 rounded-full border border-black/10 text-sm font-medium hover:text-yellow-500 transition">
             Sign in
           </button>
           <Link
             href="/write"
-            className="px-5 py-2 rounded-full bg-[var(--color-accent)] text-white text-sm font-semibold shadow-sm hover:shadow-md transition"
+            className="px-5 py-2 rounded-full text-white text-sm font-semibold shadow-sm hover:shadow-md  hover:text-yellow-500 transition"
             onClick={() => setMobileMenuOpen(false)}
           >
             Start writing
